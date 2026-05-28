@@ -2,12 +2,15 @@
   "name": "todolist",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "src/index.js",
+  "devDependencies": {
+    "sass": "^1.100.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server",
-    "scss": "node-sass --watch scss -o css"
+    "start": "npx http-server",
+    "sass-dev": "sass --watch --update --style=expanded src/Style/scss:src/Style/css",
+    "sass-prod": "sass --no-source-map --style=compressed src/Style/scss:src/Style/css"
   },
   "keywords": [],
   "author": "",
