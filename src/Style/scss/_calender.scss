@@ -1,0 +1,33 @@
+div.calendar-grid {
+
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
+    justify-items: center;
+
+
+};
+
+div.calendar-header {
+
+        width: 90%;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, 0.724);
+        border: 5px solid black;
+        color: white;
+
+};
+
+div.calendar-day-grid{
+
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+
+}

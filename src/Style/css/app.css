@@ -1,0 +1,65 @@
+div.calendar-grid {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+
+div.calendar-header {
+  width: 90%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.724);
+  border: 5px solid black;
+  color: white;
+}
+
+div.calendar-day-grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  justify-items: center;
+}
+
+.theme-toggle-button {
+  font-size: 2em;
+  border-radius: 100%;
+  box-sizing: content-box;
+  background-color: white;
+  border: none;
+}
+
+@font-face {
+  font-family: "Pixform";
+  src: url("/src/Assets/Fonts/Pixform.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Pixform", Courier, monospace;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 5vh;
+  padding: 0% 5%;
+  margin-bottom: 1vh;
+  position: static;
+}
+
+/*# sourceMappingURL=app.css.map */
