@@ -14,25 +14,36 @@ const months = [
   { month: "December", days: 31 }
 ];
 
-const selected_date = "2026-05"
+/* VVVVV Place holder VVVV */
+
+const selected_date = "2026-06" 
 
 export function loadCalendar()  {
 
-    const day_grid = document.getElementById("calendarBody");
+    //const day_grid = document.getElementById("calendarBody");
     const [current_year,current_month] = selected_date.split('-').map(Number);
 
-    day_grid.innerHTML = "";
+    //if(day_grid.innerHTML != "")day_grid.innerHTML = "";
 
+    let week_day_tracker = 0;
+    let week_line_id = 1;
 
     for (let index = 0; index < months[current_month-1].days; index++) {
-        
-        const div = document.createElement("div");
-        div.classList.add("day-container");
-        div.id = `${selected_date}-${index+1}`;
-        div.textContent = index+1;
-        day_grid.appendChild(div);
-        
-        
+
+        if(week_day_tracker < 7) {
+            week_day_tracker += 1; 
+        }
+        else {
+            week_day_tracker = 1;
+            week_line_id += 1;
+            console.log(week_line_id)
+        }
+
+        const th = document.createElement("th");
+        th.classList.add("day-container");
+        th.id = `${selected_date}-${index+1}`;
+        th.textContent = index+1;
+        document.getElementById(`column${week_line_id}`).appendChild(th)
     }
     
 

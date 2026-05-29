@@ -1,4 +1,4 @@
-div.calendar-grid {
+.calendar-grid {
   width: 100vw;
   display: grid;
   grid-template-columns: 100vw;
@@ -6,7 +6,35 @@ div.calendar-grid {
   justify-items: center;
 }
 
-div.calendar-header {
+table {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+thead {
+  width: 90%;
+}
+thead tr {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 100%;
+  justify-items: center;
+  border-bottom: 1px solid gray;
+  padding: 1% 0%;
+}
+thead tr th {
+  border-right: 1px solid gray;
+  width: 100%;
+  height: 100%;
+}
+thead tr th:last-child {
+  border: 0;
+}
+
+.calendar-header {
   width: 90%;
   height: 5vh;
   display: flex;
@@ -17,12 +45,26 @@ div.calendar-header {
   color: white;
 }
 
-div.calendar-day-grid {
+tbody {
   width: 90%;
+  height: 80vh;
+}
+tbody tr {
+  width: 100%;
+  height: 20%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(7, 1fr);
   justify-items: center;
+}
+tbody tr th {
+  border: 1px solid gray;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 6px;
+  box-sizing: border-box;
 }
 
 .theme-toggle-button {
